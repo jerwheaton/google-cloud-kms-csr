@@ -9,7 +9,9 @@ I would've done it with `openssl`, but there is no Google Cloud KMS engine avail
 ## Usage
 
 ```
-go build -o csr
+go mod init
+go mod tidy
+go build -o ./bin/csr
 ./csr -key <key-resource-id> -out my.csr --common-name MyOrg
 ```
 
